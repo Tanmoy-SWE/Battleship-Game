@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/DOLPHIN/Desktop/Coding Practice/BattleshipGame/Ship.cpp" "C:/Users/DOLPHIN/Desktop/Coding Practice/BattleshipGame/cmake-build-debug/CMakeFiles/BattleshipGame.dir/Ship.cpp.obj"
   "C:/Users/DOLPHIN/Desktop/Coding Practice/BattleshipGame/main.cpp" "C:/Users/DOLPHIN/Desktop/Coding Practice/BattleshipGame/cmake-build-debug/CMakeFiles/BattleshipGame.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

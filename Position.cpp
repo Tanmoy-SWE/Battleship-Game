@@ -1,5 +1,3 @@
-
-
 #include "Position.h"
 #include "utility.h"
 

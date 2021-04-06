@@ -75,17 +75,6 @@ CMAKE_BINARY_DIR = "C:\Users\DOLPHIN\Desktop\Coding Practice\BattleshipGame\cmak
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"G:\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -96,6 +85,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	"G:\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -130,6 +130,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named GameLibrary
+
+# Build rule for target.
+GameLibrary: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 GameLibrary
+.PHONY : GameLibrary
+
+# fast build rule for target.
+GameLibrary/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameLibrary.dir\build.make CMakeFiles/GameLibrary.dir/build
+.PHONY : GameLibrary/fast
+
+#=============================================================================
 # Target rules for targets named BattleshipGame
 
 # Build rule for target.
@@ -141,6 +154,76 @@ BattleshipGame: cmake_check_build_system
 BattleshipGame/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BattleshipGame.dir\build.make CMakeFiles/BattleshipGame.dir/build
 .PHONY : BattleshipGame/fast
+
+#=============================================================================
+# Target rules for targets named test
+
+# Build rule for target.
+test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test
+.PHONY : test
+
+# fast build rule for target.
+test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
+
+Position.obj: Position.cpp.obj
+
+.PHONY : Position.obj
+
+# target to build an object file
+Position.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameLibrary.dir\build.make CMakeFiles/GameLibrary.dir/Position.cpp.obj
+.PHONY : Position.cpp.obj
+
+Position.i: Position.cpp.i
+
+.PHONY : Position.i
+
+# target to preprocess a source file
+Position.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameLibrary.dir\build.make CMakeFiles/GameLibrary.dir/Position.cpp.i
+.PHONY : Position.cpp.i
+
+Position.s: Position.cpp.s
+
+.PHONY : Position.s
+
+# target to generate assembly for a file
+Position.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameLibrary.dir\build.make CMakeFiles/GameLibrary.dir/Position.cpp.s
+.PHONY : Position.cpp.s
+
+Ship.obj: Ship.cpp.obj
+
+.PHONY : Ship.obj
+
+# target to build an object file
+Ship.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameLibrary.dir\build.make CMakeFiles/GameLibrary.dir/Ship.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BattleshipGame.dir\build.make CMakeFiles/BattleshipGame.dir/Ship.cpp.obj
+.PHONY : Ship.cpp.obj
+
+Ship.i: Ship.cpp.i
+
+.PHONY : Ship.i
+
+# target to preprocess a source file
+Ship.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameLibrary.dir\build.make CMakeFiles/GameLibrary.dir/Ship.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BattleshipGame.dir\build.make CMakeFiles/BattleshipGame.dir/Ship.cpp.i
+.PHONY : Ship.cpp.i
+
+Ship.s: Ship.cpp.s
+
+.PHONY : Ship.s
+
+# target to generate assembly for a file
+Ship.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameLibrary.dir\build.make CMakeFiles/GameLibrary.dir/Ship.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BattleshipGame.dir\build.make CMakeFiles/BattleshipGame.dir/Ship.cpp.s
+.PHONY : Ship.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -169,6 +252,36 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BattleshipGame.dir\build.make CMakeFiles/BattleshipGame.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+test.obj: test.cpp.obj
+
+.PHONY : test.obj
+
+# target to build an object file
+test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameLibrary.dir\build.make CMakeFiles/GameLibrary.dir/test.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/test.cpp.obj
+.PHONY : test.cpp.obj
+
+test.i: test.cpp.i
+
+.PHONY : test.i
+
+# target to preprocess a source file
+test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameLibrary.dir\build.make CMakeFiles/GameLibrary.dir/test.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/test.cpp.i
+.PHONY : test.cpp.i
+
+test.s: test.cpp.s
+
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameLibrary.dir\build.make CMakeFiles/GameLibrary.dir/test.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/test.cpp.s
+.PHONY : test.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -178,9 +291,20 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... BattleshipGame
+	@echo ... GameLibrary
+	@echo ... test
+	@echo ... Position.obj
+	@echo ... Position.i
+	@echo ... Position.s
+	@echo ... Ship.obj
+	@echo ... Ship.i
+	@echo ... Ship.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... test.obj
+	@echo ... test.i
+	@echo ... test.s
 .PHONY : help
 
 

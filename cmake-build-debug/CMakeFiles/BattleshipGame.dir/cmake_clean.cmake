@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "BattleshipGame.exe"
   "BattleshipGame.exe.manifest"
   "BattleshipGame.pdb"
+  "CMakeFiles/BattleshipGame.dir/Ship.cpp.obj"
   "CMakeFiles/BattleshipGame.dir/main.cpp.obj"
   "libBattleshipGame.dll.a"
 )

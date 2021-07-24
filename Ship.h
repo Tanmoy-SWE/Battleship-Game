@@ -1,9 +1,4 @@
 /**
- * Copyright 2019 University of Michigan EECS183
- *
- * Ship.h
- * Project UID 8885f2d9f10d2f99bc099aa9c3fc0543
- * Project 4: Battleship
  *
  * Represents a ship.
  */

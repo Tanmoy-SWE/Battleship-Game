@@ -1,16 +1,4 @@
-/**
- * Copyright 2019 University of Michigan EECS183
- *
- * Ship.cpp
- * Project UID 8885f2d9f10d2f99bc099aa9c3fc0543
- *
- * <#Name#>
- * <#Uniqname#>
- *
- * Project 4: Battleship
- *
- * <#description#>
- */
+
 
 #include <cmath>
 
